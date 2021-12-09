@@ -1,0 +1,33 @@
+.container{
+    height: 100%;
+    width: 100%;
+
+    .wrapper{
+        height: 100%;
+        width: 100%;
+
+
+        .main-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .canvas-container{
+                // resize:horizontal;
+                overflow: auto;
+            }
+
+            .divider{
+                height: 100%;
+                background-color: grey;
+                cursor:col-resize;
+                // display: none;
+                user-select: none;
+                
+            }
+        }
+    }
+}
