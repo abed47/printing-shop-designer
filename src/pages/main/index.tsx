@@ -8,6 +8,7 @@ const MainComponent = (props: any) => {
     let mouseUpEvent: any = null;
 
     const [canvasWidth, setCanvasWidth] = useState<string>((window.innerWidth / 2) + 'px');
+    const [canvasHeight, setCanvasHeight] = useState<string>(window.innerHeight + 'px');
     const [threeWidth, setThreeWidth] = useState<string>((window.innerWidth / 2) + 'px');
 
     const canvasContainerRef = useRef<any>(null);
@@ -36,7 +37,7 @@ const MainComponent = (props: any) => {
     return (
         <div className="main-container">
             <div className="canvas-container" ref={canvasContainerRef} style={{width: canvasWidth}}>
-                <CanvasComponent />
+                <CanvasComponent canvasHeight={canvasHeight} canvasWidth={canvasWidth} />
             </div>
             <div draggable={false} className="divider" onMouseDown={handleLineDragStart}>H</div>
             <div className="three-container" style={{width: threeWidth}}>
