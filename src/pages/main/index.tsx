@@ -28,6 +28,7 @@ const MainComponent = (props: any) => {
         console.log(e)
         document.removeEventListener('mousemove', handleLineDrag)
         document.removeEventListener('mouseup', handleLineDragEnd);
+        //@ts-ignore
         moveEvent = null;
         mouseUpEvent = null;
     }
